@@ -6,13 +6,15 @@ import {
 import './index.css'
 import App from './App.jsx'
 
-
+import { BrowserRouter } from 'react-router-dom';
 const queryClient = new QueryClient()
 
 
 
 createRoot(document.getElementById('root')).render(
-  <QueryClientProvider client={queryClient}>
-      <App />
-  </QueryClientProvider>
+   <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+        <App />
+    </QueryClientProvider>
+  </BrowserRouter>
 )
